@@ -20,16 +20,17 @@ namespace my0502.Controllers
         }
         
         [HttpGet]
+        [Route("{id}")]
         public Rpg Get(int id)
         {
             Rpg result = null;
 
-            result =_service.Get(id);
+            result = _service.Get(id);
 
             return result;
         }
 
-
+        [HttpPost]
         public Rpg Post(Rpg rpg)
         {
             Rpg result = null;
